@@ -1,0 +1,39 @@
+<!doctype html>
+<html lang="it">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>Palleggio 2D — collisione circolare</title>
+  <link rel="stylesheet" href="style.css">
+</head>
+<body>
+  <!-- Punteggio al centro, dietro al canvas così la palla ci passa sopra -->
+  <main class="scoreboard">
+    <div class="score-row">
+      <span id="score" class="score">0</span>
+      <div class="mult-col">
+        <span id="multiplier" class="multiplier idle">x1.0</span>
+        <span id="air-bonus" class="air-bonus">+0.00</span>
+      </div>
+    </div>
+    <div id="combo" class="combo"></div>
+  </main>
+
+  <canvas id="game"></canvas>
+
+  <div class="record">
+    <span class="record-label">Record</span>
+    <span id="best" class="record-value">0</span>
+  </div>
+
+  <button id="reset" type="button">Ricomincia</button>
+
+  <div class="help">
+    Palleggia senza toccare bordi, tetto o pavimento: ogni palleggio consecutivo
+    aumenta il moltiplicatore. Più la palla resta in aria, più bonus ottieni.
+    Trick: fai un giro completo attorno alla palla senza toccarla.
+  </div>
+
+  <script src="script.js"></script>
+</body>
+</html>
